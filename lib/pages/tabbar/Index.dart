@@ -19,33 +19,14 @@ class _IndexState extends State<IndexPage> with TickerProviderStateMixin {
 
   List<ArticleModel> _articleModels = [];
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    // List<ArticleModel> _articleModels = [];
-    // 分类
-    rootBundle
+  Future<void> _loadData() async {
+    await rootBundle
         .loadString("assets/json/categories.json")
         .then((value) => {_tabList = json.decode(value)});
-    _tabController = TabController(
-        length: _tabList.length,
-        vsync: this); // categories 的长度为8 ，通常获取类目是走接口，我这边直接moke了json数据
-    _tabController.addListener(() {
-      switch (_tabController.index) {
-        //  TODO 接入 tabBarView
-      }
-    });
 
-    rootBundle
+    await rootBundle
         .loadString("assets/json/articles.json")
         .then((value) => {_articleList = json.decode(value)});
-    _articleModels = [];
-
     _articleList.forEach((element) {
       var articleInfo = element['article_info'];
       List<String> tags = [];
@@ -54,7 +35,6 @@ class _IndexState extends State<IndexPage> with TickerProviderStateMixin {
       curTags.forEach((e) {
         tags.add(e['tag_name']);
       });
-
       var articleModel = new ArticleModel(
           title: articleInfo['title'],
           author: element['author_user_info']['user_name'],
@@ -67,10 +47,25 @@ class _IndexState extends State<IndexPage> with TickerProviderStateMixin {
           tags: tags);
       _articleModels.add(articleModel);
     });
+    // _articleModels = _articleModels;
+    setState(() {
+      _articleModels = _articleModels;
+    });
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _loadData();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // 分类
+    _tabController = TabController(length: _tabList.length, vsync: this);
 
     return new Container(
-      // color: Color(0xfff5f6f7), // 背景色
-      // padding: EdgeInsets.fromLTRB(12, 6, 12, 0),
       child: new Column(
         children: [
           Container(

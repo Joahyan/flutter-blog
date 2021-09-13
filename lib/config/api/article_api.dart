@@ -11,12 +11,6 @@ Options options = new Options(
     sendTimeout: 10 * 1000, receiveTimeout: 10 * 1000, headers: httpHeaders);
 // 获取所有分类
 Future getCategories() async {
-  // var response = await dio.get(
-  //     'https://gold-tag-ms.juejin.im/v1/categories',
-  //     options: options,
-  //     // queryParameters: params
-  // );
-  // return response;
   final response = await http.get(
       Uri.parse("https://gold-tag-ms.juejin.im/v1/categories"),
       headers: httpHeaders);
