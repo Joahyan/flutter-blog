@@ -47,7 +47,6 @@ class _IndexState extends State<IndexPage> with TickerProviderStateMixin {
           tags: tags);
       _articleModels.add(articleModel);
     });
-    // _articleModels = _articleModels;
     setState(() {
       _articleModels = _articleModels;
     });

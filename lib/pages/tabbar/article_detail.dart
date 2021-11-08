@@ -19,7 +19,6 @@ class _ArticleDetailState extends State<ArticleDetail> {
   ArticleDtlModel _articleDtlModel = new ArticleDtlModel(ctime: DateTime.now());
   var tempArticleModel;
   var tempTags = [];
-
   Future<void> _loadData() async {
     await rootBundle
         .loadString("assets/json/article_detail.json")

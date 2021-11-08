@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application/config/theme.dart';
 import 'package:flutter_application/pages/tabbar/article_detail.dart';
 import 'package:flutter_application/route/route.dart';
 
@@ -67,15 +66,15 @@ class ArticleSingle extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Icon(CupertinoIcons.eye,size: 14,color: secondColor,),
+                            Icon(IconData(0xe619,fontFamily: 'MyIcons'),size: 14,),
                             SizedBox(width: 5),
                             Text(articleModel.viewCount.toString()),
                             SizedBox(width: 10),
-                            Icon(Icons.thumb_up,size: 14,color: secondColor,),
+                            Icon(IconData(0xe696,fontFamily: 'MyIcons'),size: 14),
                             SizedBox(width: 5),
                             Text(articleModel.diggCount.toString()),
                             SizedBox(width: 10),
-                            Icon(Icons.comment,size: 14,color: secondColor,),
+                            Icon(IconData(0xe651,fontFamily: 'MyIcons'),size: 14),
                             SizedBox(width: 5),
                             Text(articleModel.commentCount.toString())
                           ],

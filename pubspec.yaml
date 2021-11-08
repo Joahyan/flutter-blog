@@ -72,6 +72,8 @@ flutter:
     - assets/json/categories.json
     - assets/json/articles.json
     - assets/json/article_detail.json
+    - assets/json/boil.json
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

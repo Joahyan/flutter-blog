@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     // TODO判断是否登陆
     return MaterialApp(
       navigatorKey: navGk,
-      title: 'Flutter 练习',
+      title: 'Flutter Blog 练习',
       theme: ThemeData(
         scaffoldBackgroundColor: bgColor,
         hintColor: Colors.grey.withOpacity(0.3),
@@ -20,7 +20,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) {
-          // return LoginPage();
           return RootPage();
         }
       },
