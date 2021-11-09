@@ -80,6 +80,7 @@ class _RichTextState extends State<CommonRichText> {
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
                           setState(() {
+                            // 点击实现展开/收起的切换
                             _isExpand = !_isExpand;
                           });
                         })

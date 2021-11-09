@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application/pages/components/boil_single.dart';
 import 'package:flutter_application/pages/tabbar/boil.dart';
 
-// 沸点组件
+// 沸点list组件（暂未使用）
 class BoilList extends StatefulWidget {
   final List<Boil> boilList;
 

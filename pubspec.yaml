@@ -36,6 +36,7 @@ dependencies:
   shared_preferences: 2.0.7
   date_format: 2.0.4
   flutter_markdown: 0.6.6
+  flutter_easyrefresh: ^2.2.1
 #  flutter_html: ^2.0.0
 #  flutter_tag_layout: ^0.0.3
 
