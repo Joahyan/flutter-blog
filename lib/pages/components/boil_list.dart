@@ -6,9 +6,7 @@ import 'package:flutter_application/pages/tabbar/boil.dart';
 // 沸点list组件（暂未使用）
 class BoilList extends StatefulWidget {
   final List<Boil> boilList;
-
   BoilList({this.boilList = const []});
-
   _BoilState createState() => _BoilState();
 }
 
@@ -28,12 +26,11 @@ class _BoilState extends State<BoilList> {
     return new Container(
         child: widget.boilList.length == 0
             ? new Center(
-          child: Text('No Data'),
-        )
+                child: Text('No Data'),
+              )
             : ListView(
-          controller: _controller,
-          children: buildBoil(),
-        )
-    );
+                controller: _controller,
+                children: buildBoil(),
+              ));
   }
 }

@@ -20,7 +20,7 @@ class _LoginState extends State<LoginPage> {
       resizeToAvoidBottomInset: false, // 键盘弹起引起的挤压问题
       appBar: CommonBar(title: 'Login'),
       body: Container(
-          padding: EdgeInsets.fromLTRB(12.0, 12, 12.0, 0),
+          padding: EdgeInsets.fromLTRB(12.0, 48.0, 12.0, 0),
           child: Column(
             children: [
               Image.asset('assets/images/juejin_logo.png'),

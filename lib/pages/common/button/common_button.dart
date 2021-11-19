@@ -31,8 +31,11 @@ class CommonButton extends StatelessWidget {
     this.isBorder = false,
     this.borderColor = primaryColor,
     this.gradient = const LinearGradient(
+  // linear-gradient(270deg, #FF9022 0%, #FF5F6B 100%);
       colors: [
         Color.fromRGBO(8, 191, 98, 1.0),
+        // Color(0xffff9022),
+        // Color(0xffff5f6b)
         Color.fromRGBO(8, 191, 98, 1.0),
       ],
     ),

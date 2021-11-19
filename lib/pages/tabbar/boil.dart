@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:ffi';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
@@ -13,11 +14,9 @@ class BoilPage extends StatefulWidget {
 class _BoilState extends State<BoilPage> {
   List<Boil> boilList = [];
   var tempBoilModel = [];
-
   int _currentPage = 1;
   static const int PAGE_SIZE = 5;
   ScrollController _controller = new ScrollController(); //ListView控制器
-
   @override
   void initState() {
     // TODO: implement initState
@@ -25,7 +24,7 @@ class _BoilState extends State<BoilPage> {
     //  数据加载
     _loadData();
   }
-  // 
+  //
   Future<void> _loadData() async {
     await rootBundle
         .loadString("assets/json/boil.json")

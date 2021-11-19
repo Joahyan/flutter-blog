@@ -29,6 +29,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   dio: ^4.0.0
   http: '>=0.11.3+12'
+  simple_animations: ^3.2.0
+  supercharged: ^2.1.1
 
   #网络连接
   connectivity: 3.0.6
@@ -63,6 +65,7 @@ flutter:
 
   assets:
     - assets/images/juejin_logo.png
+    - assets/images/bg.png
 #    - assets/images/tab_classify_normal_icon.png
 #    - assets/images/tab_classify_selected_icon.png
 #    - assets/images/tab_order_normal_icon.png

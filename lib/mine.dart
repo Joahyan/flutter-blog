@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application/config/theme.dart';
+import 'package:flutter_application/pages/login/cool_page.dart';
 import 'package:flutter_application/pages/login/login.dart';
 import 'package:flutter_application/root/root_page.dart';
 import 'package:flutter_application/route/route.dart';
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         '/': (context) {
-          return RootPage();
+          // return RootPage();
+          return CoolPage();
         }
       },
     );
